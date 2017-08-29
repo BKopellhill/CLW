@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Calcula Comisión</string>
+    <string name="strtxtTextoIndicActiv1">Modo básico</string>
+    <string name="strtxtTextoInf1">Con cuanto dinero te quieres quedar?</string>
+    <string name="strtxtResul">Resultado</string>
+    <string name="strtxtTitResul">"Deberás publicar tu producto a $"</string>
+    <string name="strbtnCalcular">Calcular</string>
+    <string name="strbtnLimpiar">Limpiar</string>
+    <string name="txt_ingreso_hint">"$               "</string>
+    <string name="title_activity_advance">Advance Activity</string>
+    <string name="strbtnGo2Adv">Ir a modo avanzado</string>
+
+    <!-- Modo avanzando -->
+    <string name="strtxtTextoIndicActAdv">Modo avanzado</string>
+    <string name="strtxtInput1Adv">Vi un producto a $ </string>
+    <string name="strtxtInput2Adv">y quiero publicar el mío un </string>
+    <string name="strtxtInputPorcAdv">"%"</string>
+    <string name="strtxtRes1Adv">El resultado es: $ </string>
+    <string name="strtxtOutput1Adv">"Aplicada la comisión, te quedarán $ "</string>
+    <string name="strtxtOutput2Adv">"Para que tu importe te quede neto, deberías pulicarlo a $ "</string>
+    <string name="strRdBtnAlto">mas caro</string>
+    <string name="strRdBtnBajo">mas barato</string>
+    <string name="strbtnGo2Bas">Ir a modo básico</string>
+</resources>

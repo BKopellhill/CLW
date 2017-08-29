@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.adrian.primeraapp.AdvanceActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <!-- Android me pidió sacar la siguiente linea
+    tools:showIn="@layout/activity_advance">
+    -->
+
+    <TextView
+        android:id="@+id/textViewAdv"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="25dp"
+        android:gravity="right"
+        android:text="@string/strtxtInput1Adv"
+        android:textSize="16sp"
+        app:layout_constraintRight_toLeftOf="@+id/edtxtInputAdv"
+        app:layout_constraintTop_toBottomOf="@+id/txtIndActAdv"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <EditText
+        android:id="@+id/edtxtInputAdv"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="112dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/txtInput2"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="35dp"
+        android:gravity="right"
+        android:text="@string/strtxtInput2Adv"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdv"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/edtxt_Input_Porc"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="118dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlHardcoded,UnknownIdInLayout"
+        app:layout_constraintLeft_toRightOf="@+id/txtInput2"
+        android:layout_marginLeft="21dp" />
+
+    <TextView
+        android:id="@+id/txtInputPorc_adv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="@string/strtxtInputPorcAdv"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        android:layout_marginTop="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtInputAdv"
+        app:layout_constraintLeft_toRightOf="@+id/edtxt_Input_Porc"
+        android:layout_marginLeft="8dp" />
+
+    <RadioGroup
+        android:id="@+id/RdGrpAltoBajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:checkedButton="@+id/rdBtnAlto"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@+id/txtInputPorc_adv"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtInputAdv"
+        tools:ignore="MissingConstraints,RtlHardcoded">
+
+        <RadioButton
+            android:id="@+id/rdBtnAlto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strRdBtnAlto" />
+
+        <RadioButton
+            android:id="@+id/rdBtnBajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strRdBtnBajo" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtxt_resul1_adv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_limpiar"
+        android:layout_marginBottom="155dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal"
+        android:inputType="none"
+        android:longClickable="false"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/txt_ResulAdv"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Tit_Result_Adv"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlHardcoded,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/btn_limpiar_adv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_calc"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="71dp"
+        android:layout_marginTop="44dp"
+        android:onClick="limpiaCamposAdv"
+        android:text="@string/strbtnLimpiar"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintLeft_toRightOf="@+id/btn_calc_adv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RdGrpAltoBajo"
+        tools:ignore="RtlHardcoded,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/btn_calc_adv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtxtInputAdv"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="58dp"
+        android:background="@color/mygreen_btn_color"
+        android:onClick="calculaResultadoAdv"
+        android:text="@string/strbtnCalcular"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_limpiar"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_Input_Porc"
+        tools:ignore="RtlHardcoded,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/txtIndActAdv"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="1dp"
+        android:gravity="right"
+        android:text="@string/strtxtTextoIndicActAdv"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="21sp"
+        android:typeface="normal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/edtxtInputAdv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+    <!-- android:textAlignment="textStart"  (Android lo marcó como error de inconsistencia) -->
+
+    <TextView
+        android:id="@+id/txt_ResulAdv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="127dp"
+        android:layout_marginLeft="133dp"
+        android:gravity="right"
+        android:text="@string/strtxtRes1Adv"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Tit_Result_Adv"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <TextView
+        android:id="@+id/txtResulComAdv"
+        android:layout_width="169dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="14dp"
+        android:gravity="right"
+        android:text="@string/strtxtOutput1Adv"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ResulAdv"
+        tools:ignore="RtlHardcoded" />
+
+    <!-- android:textAlignment="textEnd" -->
+
+    <EditText
+        android:id="@+id/edTxt_ResComAdv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_limpiar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal"
+        android:inputType="none"
+        android:longClickable="false"
+        android:text=""
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/txtResulComAdv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_resul1_adv"
+        tools:ignore="RtlHardcoded,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/txt_Tit_Result_Adv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="233dp"
+        android:layout_marginLeft="0dp"
+        android:gravity="right"
+        android:text="@string/strtxtResul"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_ResulAdv"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/txt_Resul2_Adv"
+        android:layout_width="241dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="right"
+        android:text="@string/strtxtOutput2Adv"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="RtlHardcoded,UnknownIdInLayout"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtResulComAdv"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <EditText
+        android:id="@+id/edTxt_resul2_adv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_limpiar"
+        android:layout_marginBottom="46dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal"
+        android:inputType="none"
+        android:longClickable="false"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/txt_Resul2_Adv"
+        app:layout_constraintTop_toBottomOf="@+id/edTxt_ResComAdv"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlHardcoded,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/btn_Go2_Bas"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="llama_actBas"
+        android:text="@string/strbtnGo2Bas"
+        android:textColor="?android:attr/colorForegroundInverse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_resul"
+        app:layout_constraintVertical_bias="0.866"
+        tools:ignore="UnknownIdInLayout" />
+
+</android.support.constraint.ConstraintLayout>
