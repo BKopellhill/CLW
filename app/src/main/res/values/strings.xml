@@ -13,12 +13,12 @@
     <!-- Modo avanzando -->
     <string name="strtxtTextoIndicActAdv">Modo avanzado</string>
     <string name="strtxtInput1Adv">Vi un producto a $ </string>
-    <string name="strtxtInput2Adv">y quiero publicar el mío un </string>
+    <string name="strtxtInput2Adv">"y quiero publicar el mío un"</string>
     <string name="strtxtInputPorcAdv">"%"</string>
-    <string name="strtxtRes1Adv">El resultado es: $ </string>
-    <string name="strtxtOutput1Adv">"Aplicada la comisión, te quedarán $ "</string>
-    <string name="strtxtOutput2Adv">"Para que tu importe te quede neto, deberías pulicarlo a $ "</string>
-    <string name="strRdBtnAlto">mas caro</string>
-    <string name="strRdBtnBajo">mas barato</string>
+    <string name="strtxtRes1Adv">"El resultado es: $"</string>
+    <string name="strtxtOutput1Adv">"Aplicada la comisión, te quedarán $"</string>
+    <string name="strtxtOutput2Adv">"Para que tu importe te quede neto, publícalo a $"</string>
+    <string name="strRdBtnAlto">más caro</string>
+    <string name="strRdBtnBajo">más barato</string>
     <string name="strbtnGo2Bas">Ir a modo básico</string>
 </resources>
