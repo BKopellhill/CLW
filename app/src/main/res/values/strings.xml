@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calcula Comisión</string>
+    <string name="app_name">Comisión Libre</string>
     <string name="strtxtTextoIndicActiv1">Modo básico</string>
     <string name="strtxtTextoInf1">Con cuanto dinero te quieres quedar?</string>
     <string name="strtxtResul">Resultado</string>
