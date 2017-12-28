@@ -85,10 +85,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn_limpiar"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:clickable="false"
         android:ems="10"
         android:focusable="false"
@@ -97,12 +96,12 @@
         android:inputType="none"
         android:longClickable="false"
         android:text=""
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="21sp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline_v60pc"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitResul"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitResul" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_h35pc"
