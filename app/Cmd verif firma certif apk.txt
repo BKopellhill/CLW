@@ -1,0 +1,13 @@
+Comando para verificar la firma de la certificacion de la aplicacion
+
+Se debe ejecutar con la versión anterior y luego con la nueva versión. Los resultados deben ser iguales.
+
+Paso 1: Ejecutar el comando con la version anteior:
+jarsigner -verify -verbose -certs app-release.apk  > verifica_apk_v1.txt
+
+Paso 2: Generar la nueva versión del apk
+
+Paso 3: Luego de generar la nueva versión del apk, volver a ejecutar el comando anterior pero cambiando la versión del archivo de resultado:
+jarsigner -verify -verbose -certs app-release.apk  > verifica_apk_v2.txt
+
+Paso 4: Comparar ambos resultados: Deben ser iguales. 

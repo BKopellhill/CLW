@@ -21,4 +21,51 @@
     <string name="strRdBtnAlto">más caro</string>
     <string name="strRdBtnBajo">más barato</string>
     <string name="strbtnGo2Bas">Ir a modo básico</string>
+
+    <!-- Menu ayuda -->
+    <string name="action_exit">Salir</string>
+    <string name="menu_help">Ayuda</string>
+    <string name="action_about">"Acerca_de"</string>
+
+    <string name="menu_about_titulo">"Acerca de"</string>
+    <string name="menu_about_contenido"
+        >\n<b>Comisión Libre</b>\n\n
+        <b>Versión: 0.65</b>\n
+        2018-01-10\n
+        * Inclusión de menú ayuda\n
+        * Mejoras de rendimiento
+    \n\n
+        <b>Versión: 0.5</b>\n
+        2017-09-30\n
+        * Versión Inicial\n
+        </string>
+
+    <string name="menu_help_titulo">Ayuda</string>
+    <string name="menu_help_contenido"
+        >La aplicación dispone de dos modos: un modo básico y uno avanzado.\n\n
+
+El objetivo del <b>modo básico</b> es bien sencillo: calcular el precio al que deberás publicar tu producto en base a lo que pretendes cobrar por su venta.\n\n
+
+Ej: si vendes un producto a $ 100, Mercado Libre te cobrará una determinada comisión con lo cual, luego de concretada la venta dispondrás de menos dinero del que publicaste tu producto.\n\n
+
+Para calcular el importe exacto al cual deberás publicar tu producto, simplemente ingresa el importe neto que quieres obtener de la venta y luego oprime el botón Calcular, en la parte inferior de la pantalla se mostrará el resultado, en el cual aparecerá a cuanto deberás publicar tu producto.\n\n
+
+Si deseas realizar otro calculo, oprime el botón Limpiar y repite el procedimiento.\n\n
+
+El <b>modo avanzado</b> está más bien dirigido a brindarte una orientación de cara a como publicar de forma exacta el precio de tu producto comparándolo con tus competidores.\n\n
+
+Ej: Imagina que quieres publicar un producto, pero al buscarlo en Mercado Libre encuentras que muchos vendedores ofrecen exactamente el mismo producto.  Puedes entonces, tomar como referencia un precio en particular y publicar tu producto un determinado porcentaje más alto (si quieres ganar más) o más bajo (si quieres ser más competitivo) que tu competidor.\n\n
+
+En ese caso, estando dentro del modo avanzado, deberás completar en primer lugar a cuanto viste el producto que tomaste como referencia y, posteriormente, que porcentaje más caro o más barato quieres publicar tu producto respecto al que viste.\n Una vez que hayas introducido ambos datos, presiona el botón Calcular. Si quieres cambiar uno o ambos datos introducidos, presiona el botón Limpiar. Ten presente que este botón borrará todos los campos, tanto los campos de ingreso de información como los de resultado, si los hubiese.\n\n
+
+Luego de presionado el botón Calcular se mostrarán tres resultados, siendo el más relevante el ultimo de ellos, el cual es mostrado en otro color. Los dos primeros resultados son solamente informativos.\n\n
+
+La primera fila mostrará el resultado el precio del producto visto mas/menos el porcentaje ingresado.\n\n
+
+La segunda fila muestra cuanto dinero te quedaría (aplicada la comisión) si lo publicaras al precio mostrado anteriormente.  Esta información es brindada con la única finalidad de mostrarte con cuanto te quedarías si lo publicaras sin tener en cuenta lo que te descuentan por comisión.\n\n
+
+En tanto que en la última fila se muestra el resultado mas importante: a qué valor debieras publicar tu producto para que te quede neto el valor que figura en la primera fila, siendo ese el resultado del calculo del precio del producto visto mas/menos el porcentaje ingresado, es decir el valor real que quisieras obtener.\n
+
+
+    </string>
 </resources>

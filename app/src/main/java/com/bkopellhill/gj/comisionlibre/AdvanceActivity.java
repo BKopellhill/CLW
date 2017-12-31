@@ -1,8 +1,13 @@
 package com.bkopellhill.gj.comisionlibre;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -14,7 +19,7 @@ import java.math.RoundingMode;
 import java.util.Locale;
 
 
-public class AdvanceActivity extends Activity {
+public class AdvanceActivity extends AppCompatActivity {
 
     // Instancio un objeto del tipo EditText para la entrada de datos
     EditText edtxtInput;
@@ -179,8 +184,67 @@ public class AdvanceActivity extends Activity {
 
     public void llama_actBas(View view){
         // Intent inAdv2Bas = new Intent(view.getContext(),AdvanceActivity.class);
-        Intent inAdv2Bas = new Intent(this,MainActivity.class);
-        startActivity(inAdv2Bas);
+
+
+        // Intent inAdv2Bas = new Intent(this,MainActivity.class);
+        // startActivity(inAdv2Bas);
+
+        // En lugar de llamar a un intent nuevo (las 2 lineas de arriba comentadas)
+        // invoco a la funcion que es llamada cuando se le da "back" en el celular.
+        // Esto ahorra bastante uso de memoria.
+
+        onBackPressed();
+
     }
+
+    // Como es un metodo de una clase hererada se debe sobreescribir
+    @Override public boolean onCreateOptionsMenu(Menu mimenu){
+        getMenuInflater().inflate(R.menu.menu_main, mimenu);
+        return true;
+    }
+
+    @Override public boolean onOptionsItemSelected(MenuItem opcion_menu){
+        // Obtener el id de esa opción de menu
+        int id=opcion_menu.getItemId();
+        if(id==R.id.action_exit){
+            finish();
+        }
+
+        if(id==R.id.action_about){
+            AlertDialog.Builder alerta_about=new AlertDialog.Builder(AdvanceActivity.this);
+            alerta_about.setTitle(R.string.menu_about_titulo)
+                    .setMessage(R.string.menu_about_contenido)
+                    .setCancelable(false)
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alerta_about.create();
+            alerta_about.show();
+        }
+
+
+        if(id==R.id.ayuda){
+            AlertDialog.Builder alerta_ayuda=new AlertDialog.Builder(AdvanceActivity.this);
+            alerta_ayuda.setTitle(R.string.menu_help_titulo)
+                    .setMessage(R.string.menu_help_contenido)
+                    .setCancelable(false)
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alerta_ayuda.create();
+            alerta_ayuda.show();
+        }
+
+        // Llamo al metodo de la clase padre para que haga su trabajo (devolverá false)
+        return super.onOptionsItemSelected(opcion_menu);
+    }
+
+
 }
 

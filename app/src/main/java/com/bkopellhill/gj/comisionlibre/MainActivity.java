@@ -1,8 +1,12 @@
 package com.bkopellhill.gj.comisionlibre;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -97,9 +101,64 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void llama_actAdv(View view){
+
+        // Antes de llamar al intent, limpio los campos
+        limpiaCampos(null);
+        // En una futura versión se podría hacer un bundle para pasar entre actividades.
+        // Nota: Cuando se regresa de advance a basic mantiene los datos, pero no a la inversa,
+        // por ese motivo mantengo todos los campos limpios
+
         // Intent inBas2Adv = new Intent(view.getContext(),AdvanceActivity.class);
         Intent inBas2Adv = new Intent(this,AdvanceActivity.class);
         startActivity(inBas2Adv);
+    }
+
+    // Como es un metodo de una clase hererada se debe sobreescribir
+    @Override public boolean onCreateOptionsMenu(Menu mimenu){
+        getMenuInflater().inflate(R.menu.menu_main, mimenu);
+        return true;
+    }
+
+    @Override public boolean onOptionsItemSelected(MenuItem opcion_menu){
+        // Obtener el id de esa opción de menu
+        int id=opcion_menu.getItemId();
+        if(id==R.id.action_exit){
+            finish();
+        }
+
+        if(id==R.id.action_about){
+            AlertDialog.Builder alerta_about=new AlertDialog.Builder(MainActivity.this);
+            alerta_about.setTitle(R.string.menu_about_titulo)
+                    .setMessage(R.string.menu_about_contenido)
+                    .setCancelable(false)
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alerta_about.create();
+            alerta_about.show();
+        }
+
+
+        if(id==R.id.ayuda){
+            AlertDialog.Builder alerta_ayuda=new AlertDialog.Builder(MainActivity.this);
+            alerta_ayuda.setTitle(R.string.menu_help_titulo)
+                    .setMessage(R.string.menu_help_contenido)
+                    .setCancelable(false)
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alerta_ayuda.create();
+            alerta_ayuda.show();
+        }
+
+        // Llamo al metodo de la clase padre para que haga su trabajo (devolverá false)
+        return super.onOptionsItemSelected(opcion_menu);
     }
 
 }
