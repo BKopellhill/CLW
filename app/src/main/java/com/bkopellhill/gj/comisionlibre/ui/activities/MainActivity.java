@@ -2,14 +2,19 @@ package com.bkopellhill.gj.comisionlibre.ui.activities;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.bitcodeing.framework.AppSettings;
 import com.bitcodeing.framework.activities.BaseActivity;
+import com.bkopellhill.gj.comisionlibre.BuildConfig;
 import com.bkopellhill.gj.comisionlibre.R;
 import com.bkopellhill.gj.comisionlibre.core.adapters.HomeAdapter;
+import com.bkopellhill.gj.comisionlibre.core.utils.Utils;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
 
@@ -21,6 +26,7 @@ import io.fabric.sdk.android.Fabric;
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends BaseActivity {
 
+    private static final String TAG = "MainActivity";
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -40,6 +46,11 @@ public class MainActivity extends BaseActivity {
 
             tabLayout.setupWithViewPager(viewPager);
         }
+
+        if (Utils.compareVersionNames(PreferenceManager.getDefaultSharedPreferences(this)
+                .getString(AppSettings.PREFERENCE_VERSION,"0.65"),BuildConfig.VERSION_NAME) == -1){
+            logChange();
+        }
     }
 
     @Override
@@ -56,22 +67,12 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        AlertDialog.Builder dialog =new AlertDialog.Builder(this);
         switch (item.getItemId()){
             case R.id.action_about:
-                dialog.setTitle(R.string.menu_about_titulo)
-                    .setMessage(R.string.menu_about_contenido)
-                    .setCancelable(false)
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-                dialog.create();
-                dialog.show();
+                logChange();
                 return true;
             case R.id.action_help:
+                AlertDialog.Builder dialog =new AlertDialog.Builder(this);
                 dialog.setTitle(R.string.menu_help_titulo)
                         .setMessage(R.string.menu_help_contenido)
                         .setCancelable(false)
@@ -89,6 +90,25 @@ public class MainActivity extends BaseActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void logChange(){
+        AlertDialog.Builder dialog =new AlertDialog.Builder(this);
+        dialog.setTitle(R.string.menu_about_titulo)
+                .setMessage(R.string.menu_about_contenido)
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
+                                .edit()
+                                .putString(AppSettings.PREFERENCE_VERSION,BuildConfig.VERSION_NAME)
+                                .apply();
+                    }
+                });
+        dialog.create();
+        dialog.show();
     }
 
     @Override

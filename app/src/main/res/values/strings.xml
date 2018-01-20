@@ -50,8 +50,13 @@
     <string name="action_about">"Acerca_de"</string>
 
     <string name="menu_about_titulo">"Acerca de"</string>
-    <string name="menu_about_contenido"
-        >\n<b>Comisión Libre</b>\n\n
+    <string name="menu_about_contenido">
+        \n<b>Comisión Libre</b>\n\n
+        <b>Versión: 0.70</b>\n
+        2018-01-20\n
+        * Separación ahora por secciones para mejor navegación\n
+        * Mejoras de rendimiento
+    \n\n
         <b>Versión: 0.65</b>\n
         2018-01-10\n
         * Inclusión de menú ayuda\n
