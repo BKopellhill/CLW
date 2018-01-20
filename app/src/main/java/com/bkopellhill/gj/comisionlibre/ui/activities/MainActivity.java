@@ -8,7 +8,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.bitcodeing.framework.AppSettings;
 import com.bitcodeing.framework.activities.BaseActivity;
 import com.bkopellhill.gj.comisionlibre.BuildConfig;
@@ -26,7 +25,6 @@ import io.fabric.sdk.android.Fabric;
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends BaseActivity {
 
-    private static final String TAG = "MainActivity";
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
