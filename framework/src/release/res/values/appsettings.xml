@@ -1,0 +1,13 @@
+<resources>
+    <string name="host">https://api.fuerzavoluntaria.com/api</string>
+    <string name="host_link_share">https://web.fuerzavoluntaria.com/deep/posts/%1$s</string>
+    <string name="host_deep_link">web.fuerzavoluntaria.com</string>
+    <string name="content_type_key">Content-Type</string>
+    <string name="accept_type_key">Accept</string>
+    <string name="authorization_key">Authorization</string>
+    <string name="json_type">application/json</string>
+    <string name="bearer_token_value">bearer</string>
+    <string name="scopes">profile email phone roles offline_access</string>
+    <string name="firebase_topic_news">highlight_news</string>
+    <string name="firebase_topic_news_dev">highlight_news_dev</string>
+</resources>

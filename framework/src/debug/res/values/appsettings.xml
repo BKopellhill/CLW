@@ -1,0 +1,7 @@
+<resources>
+    <string name="content_type_key">Content-Type</string>
+    <string name="accept_type_key">Accept</string>
+    <string name="authorization_key">Authorization</string>
+    <string name="json_type">application/json</string>
+    <string name="bearer_token_value">Bearer</string>
+</resources>

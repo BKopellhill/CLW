@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">Comisión Libre</string>
+
+    <!-- Modes -->
+    <string name="basic_mode">Modo Básico</string>
+    <string name="advance_mode">Modo Avanzado</string>
+    <!-- Basic Mode -->
+    <string name="with_how_much_money">Con cuánto dinero te quieres quedar?</string>
+    <string name="amount">Monto</string>
+    <string name="you_must_publish_your_product">Deberás publicar tu producto</string>
+
+
+    <!-- Errors -->
+    <!-- General -->
+    <string name="error_general">Campo requerido</string>
+    <!-- Mode advance -->
+    <string name="error_entry">Debes ingresar un monto</string>
+    <string name="error_percentage">Debes ingresar un porcentaje</string>
+
+
+
+    <!-- -->
     <string name="strtxtTextoIndicActiv1">Modo básico</string>
     <string name="strtxtTextoInf1">Con cuanto dinero te quieres quedar?</string>
     <string name="strtxtResul">Resultado</string>
@@ -24,7 +44,7 @@
 
     <!-- Menu ayuda -->
     <string name="action_exit">Salir</string>
-    <string name="menu_help">Ayuda</string>
+    <string name="action_help">Ayuda</string>
     <string name="action_about">"Acerca_de"</string>
 
     <string name="menu_about_titulo">"Acerca de"</string>

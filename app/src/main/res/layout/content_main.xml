@@ -9,7 +9,7 @@
     tools:context="com.bkopellhill.gj.comisionlibre.MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main_">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_v60pc"

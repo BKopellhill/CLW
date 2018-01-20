@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appbar"
+    app:elevation="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    tools:ignore="RtlSymmetry">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/AppThemeActionBarStyle"
+        app:theme="@style/ThemeOverlay">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/logo_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription"/>
+
+            <com.bitcodeing.framework.views.TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:fontType="ROBOTO_LIGHT"
+                android:textAllCaps="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@color/bg_white_70ffffff"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorColor="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
+        app:tabGravity="fill"/>
+
+</android.support.design.widget.AppBarLayout>

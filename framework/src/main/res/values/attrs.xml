@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fontType" format="enum">
+        <enum name="ROBOTO_BLACK" value="0" />
+        <enum name="ROBOTO_BLACK_ITALIC" value="1" />
+        <enum name="ROBOTO_BOLD" value="2" />
+        <enum name="ROBOTO_BOLD_ITALIC" value="3" />
+        <enum name="ROBOTO_ITALIC" value="4" />
+        <enum name="ROBOTO_LIGHT" value="5" />
+        <enum name="ROBOTO_LIGHT_ITALIC" value="6" />
+        <enum name="ROBOTO_MEDIUM" value="7" />
+        <enum name="ROBOTO_MEDIUM_ITALIC" value="8" />
+        <enum name="ROBOTO_REGULAR" value="9" />
+        <enum name="ROBOTO_THIN" value="10" />
+        <enum name="ROBOTO_THIN_ITALIC" value="11" />
+    </attr>
+
+    <declare-styleable name="FontType">
+        <attr name="fontType" />
+    </declare-styleable>
+
+    <declare-styleable name="Text">
+        <attr name="fontType" />
+    </declare-styleable>
+
+    <declare-styleable name="EditText">
+        <attr name="fontType" />
+    </declare-styleable>
+
+    <declare-styleable name="Button">
+        <attr name="fontType" />
+    </declare-styleable>
+
+    <declare-styleable name="Alerter">
+        <attr name="alertStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="Alert">
+        <attr name="alertIcon" format="reference"/>
+        <attr name="alertBackgroundColor" format="color"/>
+        <attr name="alertTitle" format="string"/>
+        <attr name="alertText" format="string"/>
+    </declare-styleable>
+
+</resources>

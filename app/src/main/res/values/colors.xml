@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#303f9f</color>
-    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorPrimary">@color/bg_green_3cb1ac</color>
+    <color name="colorPrimaryDark">@color/bg_green_29837f</color>
     <color name="colorAccent">#FF4081</color>
     <color name="mygreen_btn_color">#55cb4d</color>
+
+    <!-- A -->
+
+    <!-- B -->
+    <color name="bg_black_6d6c6c">#6d6c6c</color>
+
+    <!-- C -->
+
+    <!-- G -->
+    <color name="bg_green_3cb1ac">#3cb1ac</color>
+    <color name="bg_green_29837f">#29837f</color>
+    <color name="bg_grey_f3f6f7">#f3f6f7</color>
+
+    <!-- W -->
+    <color name="bg_white_70ffffff">#70ffffff</color>
 </resources>
