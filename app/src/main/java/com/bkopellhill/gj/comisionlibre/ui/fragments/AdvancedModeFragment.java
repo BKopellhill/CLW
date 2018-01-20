@@ -102,6 +102,11 @@ public class AdvancedModeFragment extends BaseFragment implements RadioGroup.OnC
             MessageUtil.with(getParent()).show(R.string.error_general,R.string.error_percentage,R.color.colorPrimary);
             return false;
         }
+
+        if (Double.parseDouble(entryPercentage.getText().toString()) < 0 || Double.parseDouble(entryPercentage.getText().toString()) > 100){
+            MessageUtil.with(getParent()).show(R.string.error_invalid,R.string.error_invalid_percentage,R.color.colorPrimary);
+            return false;
+        }
         return true;
     }
 }

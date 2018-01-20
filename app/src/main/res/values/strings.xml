@@ -13,9 +13,11 @@
     <!-- Errors -->
     <!-- General -->
     <string name="error_general">Campo requerido</string>
+    <string name="error_invalid">Campo invalido</string>
     <!-- Mode advance -->
     <string name="error_entry">Debes ingresar un monto</string>
     <string name="error_percentage">Debes ingresar un porcentaje</string>
+    <string name="error_invalid_percentage">Debes ingresar un porcentaje valido</string>
 
 
 
