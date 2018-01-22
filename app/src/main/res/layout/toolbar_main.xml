@@ -15,14 +15,12 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/AppThemeActionBarStyle"
-        app:theme="@style/ThemeOverlay">
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Light">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
             >
 
             <ImageView
@@ -40,8 +38,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                app:fontType="ROBOTO_LIGHT"
-                android:textAllCaps="true"
+                app:fontType="ROBOTO_MEDIUM"
                 android:ellipsize="end"
                 android:maxLines="1"
                 tools:ignore="ContentDescription" />

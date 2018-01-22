@@ -5,7 +5,7 @@
         <item name="android:colorPrimary">@color/colorPrimary</item>
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:colorAccent">@android:color/white</item>
-        <item name="actionBarStyle">@style/AppThemeActionBarStyle</item>
+        <!--<item name="actionBarStyle">@style/AppThemeActionBarStyle</item>-->
     </style>
 
     <style name="AppThemeActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar">

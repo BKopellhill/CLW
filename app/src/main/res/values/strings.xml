@@ -17,7 +17,7 @@
     <!-- Mode advance -->
     <string name="error_entry">Debes ingresar un monto</string>
     <string name="error_percentage">Debes ingresar un porcentaje</string>
-    <string name="error_invalid_percentage">Debes ingresar un porcentaje valido</string>
+    <string name="error_invalid_percentage">Porcentaje válido: entre 0 y 100</string>
 
 
 
