@@ -29,7 +29,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 3
-        versionName "0.70"
+        versionName "0.85"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
@@ -68,6 +68,7 @@ android {
         }
     }
 
+    /*
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
@@ -77,6 +78,13 @@ android {
             }
         }
     }
+    */
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.name}-${variant.versionName}.apk"
+        }
+    }
+
 }
 
 dependencies {

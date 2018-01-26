@@ -47,7 +47,7 @@ public class MainActivity extends BaseActivity {
 
         if (Utils.compareVersionNames(PreferenceManager.getDefaultSharedPreferences(this)
                 .getString(AppSettings.PREFERENCE_VERSION,"0.65"),BuildConfig.VERSION_NAME) == -1){
-            logChange();
+            logChange(1);
         }
     }
 
@@ -67,7 +67,7 @@ public class MainActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_about:
-                logChange();
+                logChange(2);
                 return true;
             case R.id.action_help:
                 AlertDialog.Builder dialog =new AlertDialog.Builder(this);
@@ -90,19 +90,20 @@ public class MainActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void logChange(){
+    private void logChange(int orig){
+
         AlertDialog.Builder dialog =new AlertDialog.Builder(this);
-        dialog.setTitle(R.string.menu_about_titulo)
-                .setMessage(R.string.menu_about_contenido)
-                .setCancelable(false)
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+        dialog.setTitle( orig == 1? R.string.strchgl_titulo : R.string.menu_about_titulo)
+            .setMessage( orig == 1? R.string.strchgl_contenido : R.string.menu_about_contenido)
+            .setCancelable(false)
+            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
-                                .edit()
-                                .putString(AppSettings.PREFERENCE_VERSION,BuildConfig.VERSION_NAME)
-                                .apply();
+              dialog.dismiss();
+              PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
+              .edit()
+              .putString(AppSettings.PREFERENCE_VERSION,BuildConfig.VERSION_NAME)
+              .apply();
                     }
                 });
         dialog.create();
