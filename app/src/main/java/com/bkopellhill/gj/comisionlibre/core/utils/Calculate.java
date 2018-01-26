@@ -13,7 +13,7 @@ public final class Calculate {
 
     private static Calculate calculate;
 
-    private final double byCommission=0.11;
+    private final double byCommission=0.12;
     private final double commission = 1.0-byCommission;
 
     private static double amout;

@@ -96,16 +96,16 @@ public class MainActivity extends BaseActivity {
         dialog.setTitle( orig == 1? R.string.strchgl_titulo : R.string.menu_about_titulo)
             .setMessage( orig == 1? R.string.strchgl_contenido : R.string.menu_about_contenido)
             .setCancelable(false)
-            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            .setPositiveButton(getString(R.string.cast_tracks_chooser_dialog_ok), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-              dialog.dismiss();
-              PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
-              .edit()
-              .putString(AppSettings.PREFERENCE_VERSION,BuildConfig.VERSION_NAME)
-              .apply();
-                    }
-                });
+                          dialog.dismiss();
+                          PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
+                          .edit()
+                          .putString(AppSettings.PREFERENCE_VERSION,BuildConfig.VERSION_NAME)
+                          .apply();
+                        }
+                    });
         dialog.create();
         dialog.show();
     }
